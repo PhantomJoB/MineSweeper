@@ -6,8 +6,8 @@
     <ProjectGuid>{3B884E7A-F314-47E4-94E5-3A079CE532D4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MinesweeperAnalyser.UnitTest</RootNamespace>
-    <AssemblyName>MinesweeperAnalyser.UnitTest</AssemblyName>
+    <RootNamespace>MinesweeperTools.UnitTest</RootNamespace>
+    <AssemblyName>MinesweeperTools.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
