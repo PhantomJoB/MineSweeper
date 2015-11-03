@@ -5,7 +5,7 @@ using MinesweeperTools;
 namespace MinesweeperAnalyser.UnitTest
 {
 	[TestClass]
-	public class AnalyserTest
+	public class BombsAnalyserTest
 	{
 		bool[,] _bombsMatrix;
 
@@ -18,7 +18,7 @@ namespace MinesweeperAnalyser.UnitTest
 		[TestMethod]
 		public void FindBombs_WhenTwoArround_ReturnTwo()
 		{
-			Analyser analyser = new Analyser(_bombsMatrix);
+			BombsAnalyser analyser = new BombsAnalyser(_bombsMatrix);
 
 			int nbrBomb = analyser.FindBombs(2, 1);
 
@@ -28,7 +28,7 @@ namespace MinesweeperAnalyser.UnitTest
 		[TestMethod]
 		public void FindBombs_WhenOneArround_ReturnOne()
 		{
-			Analyser analyser = new Analyser(_bombsMatrix);
+			BombsAnalyser analyser = new BombsAnalyser(_bombsMatrix);
 
 			int nbrBomb = analyser.FindBombs(0, 0);
 
@@ -38,7 +38,7 @@ namespace MinesweeperAnalyser.UnitTest
 		[TestMethod]
 		public void FindBombs_WhenNoneArround_ReturnZero()
 		{
-			Analyser analyser = new Analyser(_bombsMatrix);
+			BombsAnalyser analyser = new BombsAnalyser(_bombsMatrix);
 
 			int nbrBomb = analyser.FindBombs(3, 0);
 
@@ -49,7 +49,7 @@ namespace MinesweeperAnalyser.UnitTest
 		[ExpectedException(typeof(OutsideMatrixException))]
 		public void FindBombs_WhenOutsideOfMatrix_CoordinateX_ThrowException()
 		{
-			Analyser analyser = new Analyser(_bombsMatrix);
+			BombsAnalyser analyser = new BombsAnalyser(_bombsMatrix);
 
 			int nbrBomb = analyser.FindBombs(5, 0);
 		}
@@ -58,7 +58,7 @@ namespace MinesweeperAnalyser.UnitTest
 		[ExpectedException(typeof(OutsideMatrixException))]
 		public void FindBombs_WhenOutsideOfMatrix_CoordinateY_ThrowException()
 		{
-			Analyser analyser = new Analyser(_bombsMatrix);
+			BombsAnalyser analyser = new BombsAnalyser(_bombsMatrix);
 
 			int nbrBomb = analyser.FindBombs(0, 5);
 		}
@@ -67,7 +67,7 @@ namespace MinesweeperAnalyser.UnitTest
 		[ExpectedException(typeof(OutsideMatrixException))]
 		public void FindBombs_WhenOutsideOfMatrix_CoordinateXandY_ThrowException()
 		{
-			Analyser analyser = new Analyser(_bombsMatrix);
+			BombsAnalyser analyser = new BombsAnalyser(_bombsMatrix);
 
 			int nbrBomb = analyser.FindBombs(9, 9);
 		}
@@ -75,7 +75,7 @@ namespace MinesweeperAnalyser.UnitTest
 		[TestMethod]
 		public void FindBombs_WhenOnABomb_ReturnMinusOne()
 		{
-			Analyser analyser = new Analyser(_bombsMatrix);
+			BombsAnalyser analyser = new BombsAnalyser(_bombsMatrix);
 
 			int nbrBomb = analyser.FindBombs(1, 1);
 

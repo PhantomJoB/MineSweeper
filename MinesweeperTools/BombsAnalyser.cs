@@ -6,14 +6,14 @@ using System.Threading.Tasks;
 
 namespace MinesweeperTools
 {
-    public class Analyser
+    public class BombsAnalyser
     {
-		public Analyser(bool[,] bombsMatrix)
+		public BombsAnalyser(bool[,] bombsMatrix)
 		{
 		}
 
 		// La premiere coordonné est 0, 0
-		public int FindBombs(int coordinateX, int coordinateY)
+		public int FindBombs(int columnCoordinate, int rowCoordinate)
 		{
 			return 999;
 		}
